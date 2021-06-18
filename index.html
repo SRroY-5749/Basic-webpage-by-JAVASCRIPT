@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Phonix</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="main">
+      <nav>
+        <div class="logo">
+          <img src="img/logo.jpg" alt="logo" />
+        </div>
+        <div class="nav-links">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Phone</a></li>
+            <li><a href="">Accessories</a></li>
+            <li><a href="">Cart</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="information">
+        <div class="overlay"></div>
+        <img src="img/mobile.jpg"  alt="mobile" class="mobile">
+        <div id="circle">
+          <div class="feature one">
+            <img src="img/camera.png" alt="camera" />
+
+            <div>
+              <h1>Camera</h1>
+              <p>48mp, <br />Wide Angle Lens</p>
+            </div>
+          </div>
+          <div class="feature two">
+            <img
+              src="https://img.icons8.com/fluent/48/000000/processor.png"
+              alt="processor"
+            />
+
+            <div>
+              <h1>Processor</h1>
+              <p>720G 5G Processor, 12nm Technology</p>
+            </div>
+          </div>
+          <div class="feature three">
+            <img src="img/display.jpg" alt="display" />
+            <div>
+              <h1>Display</h1>
+              <p>6.4" Super Amoloyed Display</p>
+            </div>
+          </div>
+          <div class="feature four">
+            <img
+              src="https://img.icons8.com/cute-clipart/64/000000/battery.png"
+              alt="battery"
+            />
+            <div>
+              <h1>Battery</h1>
+              <p>6000mah, <br />With 33W Super Charger</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="controls">
+        <img src="https://img.icons8.com/metro/26/000000/expand-arrow.png" alt="arrow" id="upBtn">
+        <h3>Features</h3>
+        <img src="https://img.icons8.com/metro/26/000000/expand-arrow.png" alt="arrow" id="dnBtn">
+      </div>
+    </div>
+    
+    
+    
+    <script>
+
+      var circle = document.getElementById("circle");
+      var upBtn = document.getElementById("upBtn");
+      var dnBtn = document.getElementById("dnBtn");
+
+      var rotateValue = circle.style.transform;
+
+      var rotateSum;
+
+      upBtn.onclick = function(){
+        rotateSum = rotateValue + "rotate(-90deg)";
+        circle.style.transform = rotateSum;
+        rotateValue = rotateSum;
+      }
+
+      dnBtn.onclick = function(){
+        rotateSum = rotateValue + "rotate(90deg)";
+        circle.style.transform = rotateSum;
+        rotateValue = rotateSum;
+      }
+    </script>
+  </body>
+</html>
